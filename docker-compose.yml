@@ -9,6 +9,18 @@ web:
     - php
 
 php:
-  image: php:7.1-fpm
+  build: .
+  dockerfile: docker/DockerfilePhp
   volumes:
     - ./samplephpwebsite:/code
+  links:
+    - db
+
+db:
+  image: mariadb:10.1
+  volumes:
+    - ./install/create.sql:/docker-entrypoint-initdb.d/create.sql
+  environment:
+    MYSQL_ROOT_PASSWORD: azerty
+  ports:
+    - 3306:3306
