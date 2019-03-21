@@ -6,10 +6,7 @@ job('job-v1') {
         }
     }
     triggers {
-        scm('* H/1 * * *')
-    }
-    wrappers {
-        nodejs('NodeJS9')
+        scm('H/60 * * * *')
     }
     steps {
         shell("npm install")
