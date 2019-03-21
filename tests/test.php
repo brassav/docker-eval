@@ -10,3 +10,4 @@ class Test extends TestCase
         $this->assertEquals($expected, $actual);
     
 }
+?>
