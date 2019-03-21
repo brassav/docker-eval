@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-require_once "../samplephpwebsite/functions.php";
+require_once "../samplephpwebsite/functions";
 
 class Test extends TestCase
 {
