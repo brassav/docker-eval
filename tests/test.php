@@ -2,6 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
+require "samplephpwebsite";
 require "samplephpwebsite/functions.php";
 require "samplephpwebsite/config.php";
 
@@ -17,7 +18,7 @@ class Test extends TestCase
         public function testSiteVersion()
         {
                 $expected = config('version');
-                $actual = siteVersion()();
+                $actual = siteVersion();
                 $this->expectOutputString($expected);
         }
 
