@@ -2,8 +2,8 @@
 
 use PHPUnit\Framework\TestCase;
 
-require "samplephpwebsite/*";
-
+require "samplephpwebsite/functions.php";
+require "samplephpwebsite/config.php";
 
 class Test extends TestCase
 {
@@ -47,29 +47,6 @@ class Test extends TestCase
                 $this->expectOutputString($expected);
         }
 
-        public function testPageContent()
-        {
-                $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-
-                if ($page == '/') $page = 'home';
-
-                $path = getcwd() . '/' . config('content_path') . '/' . $page . '.php';
-
-                if (file_exists(filter_var($path, FILTER_SANITIZE_URL))) {
-                       $expected =  include $path;
-                } else {
-                       $expected =  include config('content_path') . '/404.php';
-                }
-                $actual = pageContent();
-                $this->expectOutputString($expected);
-        }
-
-        public function testRun()
-        {
-                $expected = include config('template_path').'/templat e .php';
-
-                $actual = pageContent();
-                $this->expectOutputString($expected);
-        }
+        
 }
  
