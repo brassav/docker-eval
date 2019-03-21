@@ -1,0 +1,37 @@
+Started by user [8mha:////4HSq7tgAj4DrTO5EDPSXrXtgY3OH3IG6EuVCffpdQCi+AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Started by user [8mha:////4HSq7tgAj4DrTO5EDPSXrXtgY3OH3IG6EuVCffpdQCi+AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Building in workspace /var/jenkins_home/workspace/job-v3
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/brassav/docker-eval # timeout=10
+Fetching upstream changes from https://github.com/brassav/docker-eval
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/brassav/docker-eval +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/v3^{commit} # timeout=10
+Checking out Revision 5e14bba0c7590ece79a4913a7567b2fe5f84c950 (origin/v3)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5e14bba0c7590ece79a4913a7567b2fe5f84c950
+Commit message: "v3"
+ > git rev-list --no-walk 5e14bba0c7590ece79a4913a7567b2fe5f84c950 # timeout=10
+ > git tag -a -f -m Jenkins Build #2 jenkins-job-v3-2 # timeout=10
+[job-v3] $ /bin/sh -xe /tmp/jenkins6886748724617313265.sh
++ rm -rf samplephpwebsite
+[job-v3] $ /bin/sh -xe /tmp/jenkins5867339544654992639.sh
++ git clone https://github.com/Akasam/samplephpwebsite
+Cloning into 'samplephpwebsite'...
++ cd samplephpwebsite
++ git checkout v3
+Switched to a new branch 'v3'
+Branch v3 set up to track remote branch v3 from origin.
++ cd ..
+[job-v3] $ /bin/sh -xe /tmp/jenkins7332470956543387161.sh
++ phpunit tests/test.php
+PHPUnit 5.4.6 by Sebastian Bergmann and contributors.
+
+....                                                                4 / 4 (100%)
+
+Time: 93 ms, Memory: 4.00MB
+
+OK (4 tests, 4 assertions)
+Finished: SUCCESS

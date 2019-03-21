@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+    <actions/>
+    <description/>
+    <keepDependencies>false</keepDependencies>
+    <properties/>
+    <canRoam>true</canRoam>
+    <disabled>false</disabled>
+    <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+    <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+    <triggers>
+        <hudson.triggers.SCMTrigger>
+            <spec>H/60 * * * *</spec>
+            <ignorePostCommitHooks>false</ignorePostCommitHooks>
+        </hudson.triggers.SCMTrigger>
+    </triggers>
+    <concurrentBuild>false</concurrentBuild>
+    <builders>
+        <hudson.tasks.Shell>
+            <command>rm -rf samplephpwebsite</command>
+        </hudson.tasks.Shell>
+        <hudson.tasks.Shell>
+            <command>git clone https://github.com/Akasam/samplephpwebsite;cd samplephpwebsite;git checkout v1;cd ..</command>
+        </hudson.tasks.Shell>
+        <hudson.tasks.Shell>
+            <command>phpunit tests/test.php</command>
+        </hudson.tasks.Shell>
+    </builders>
+    <publishers/>
+    <buildWrappers/>
+    <scm class="hudson.plugins.git.GitSCM">
+        <userRemoteConfigs>
+            <hudson.plugins.git.UserRemoteConfig>
+                <url>https://github.com/brassav/docker-eval</url>
+            </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+            <hudson.plugins.git.BranchSpec>
+                <name>v1</name>
+            </hudson.plugins.git.BranchSpec>
+        </branches>
+        <configVersion>2</configVersion>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <gitTool>Default</gitTool>
+        <extensions>
+            <hudson.plugins.git.extensions.impl.PerBuildTag/>
+        </extensions>
+        <gitConfigName>valentin</gitConfigName>
+        <gitConfigEmail>valentin.brassart@estiam.com</gitConfigEmail>
+    </scm>
+</project>
