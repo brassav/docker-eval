@@ -1,6 +1,9 @@
 job('job-v1') {
     scm {
-        git('https://github.com/brassav/docker-eval', "v1")
+        git('https://github.com/brassav/docker-eval', "v1") { node ->
+            node / gitConfigName('valentin')
+            not / gitConfigEmail('valentin.brassart@estiam.com')
+        }
     }
     triggers {
         scm('* H/1 * * *')
