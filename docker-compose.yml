@@ -9,6 +9,6 @@ web:
     - php
 
 php:
-  image: php:7-fpm
+  image: php:7.1-fpm
   volumes:
     - ./samplephpwebsite:/code

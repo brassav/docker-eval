@@ -1,6 +1,6 @@
-job('job-v1') {
+job('job-v2') {
     scm {
-        git('https://github.com/brassav/docker-eval', "v1") { node ->
+        git('https://github.com/brassav/docker-eval', "v2") { node ->
             node / gitConfigName('valentin')
             node / gitConfigEmail('valentin.brassart@estiam.com')
         }
@@ -10,7 +10,7 @@ job('job-v1') {
     }
     steps {
         shell("rm -rf samplephpwebsite")
-        shell("git clone https://github.com/Akasam/samplephpwebsite;cd samplephpwebsite;git checkout v1;cd ..")
+        shell("git clone https://github.com/Akasam/samplephpwebsite;cd samplephpwebsite;git checkout v2;cd ..")
         shell("phpunit tests/test.php")
     }
 }
