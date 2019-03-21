@@ -10,7 +10,7 @@ class Test extends TestCase
         {
                 $expected = config('name');
                 $actual = siteName();
-                $this->assertEquals($expected, $actual);
+               $this->expectOutputString($expected);
         }
 }
 ?>
