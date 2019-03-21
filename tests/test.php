@@ -7,7 +7,7 @@ class Test extends TestCase
 {
         public function testSiteName()
         {
-                $expected = echo config('name');
+                $expected = config('name');
                 $actual = siteName();
                 $this->assertEquals($expected, $actual);
         }
