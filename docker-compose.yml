@@ -13,7 +13,9 @@ php:
   dockerfile: docker/DockerfilePhp
   volumes:
     - ./samplephpwebsite:/code
-
+  links:
+    - db
+    
 jenkins:
   build: .
   dockerfile: docker/DockerfileJenkins
@@ -21,8 +23,7 @@ jenkins:
     - ./jenkins_home:/var/jenkins_home
   ports:
     - 8081:8080
-  links:
-    - db
+
 
 db:
   image: mariadb:10.1
