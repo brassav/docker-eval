@@ -1,0 +1,24 @@
+Started by user [8mha:////4HSq7tgAj4DrTO5EDPSXrXtgY3OH3IG6EuVCffpdQCi+AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Building in workspace /var/jenkins_home/workspace/getV3
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/brassav/docker-eval
+ > git init /var/jenkins_home/workspace/getV3 # timeout=10
+Fetching upstream changes from https://github.com/brassav/docker-eval
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/brassav/docker-eval +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/brassav/docker-eval # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/brassav/docker-eval # timeout=10
+Fetching upstream changes from https://github.com/brassav/docker-eval
+ > git fetch --tags --progress https://github.com/brassav/docker-eval +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/v3^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/v3^{commit} # timeout=10
+Checking out Revision 5e14bba0c7590ece79a4913a7567b2fe5f84c950 (refs/remotes/origin/v3)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5e14bba0c7590ece79a4913a7567b2fe5f84c950
+Commit message: "v3"
+First time build. Skipping changelog.
+Processing DSL script tests/job.groovy
+ERROR: script not yet approved for use
+Finished: FAILURE

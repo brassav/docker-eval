@@ -1,0 +1,20 @@
+Started by user [8mha:////4HSq7tgAj4DrTO5EDPSXrXtgY3OH3IG6EuVCffpdQCi+AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Building in workspace /var/jenkins_home/workspace/getV1
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/brassav/docker-eval # timeout=10
+Fetching upstream changes from https://github.com/brassav/docker-eval
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/brassav/docker-eval +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/v1^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/v1^{commit} # timeout=10
+Checking out Revision 390077e6be9764ba66ed1f55a308489c62ea7cae (refs/remotes/origin/v1)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 390077e6be9764ba66ed1f55a308489c62ea7cae
+Commit message: "add script"
+ > git rev-list --no-walk 390077e6be9764ba66ed1f55a308489c62ea7cae # timeout=10
+Processing DSL script tests/job.groovy
+Added items:
+    GeneratedJob{name='job-v1'}
+Finished: SUCCESS

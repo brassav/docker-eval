@@ -12,3 +12,11 @@ php:
   image: php:7.1-fpm
   volumes:
     - ./samplephpwebsite:/code
+
+jenkins:
+  build: .
+  dockerfile: docker/DockerfileJenkins
+  volumes:
+    - ./jenkins_home:/var/jenkins_home
+  ports:
+    - 8081:8080
