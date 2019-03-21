@@ -9,7 +9,13 @@ job('job-v1') {
         scm('H/60 * * * *')
     }
     steps {
-        shell("npm install")
-        shell("npm test")
+        shell("git clone https://github.com/Akasam/samplephpwebsite;
+cd samplephpwebsite;
+git checkout v1;
+cd ..
+   ")
+        shell("phpunit tests/test.php")
+        
+        shell("rm -rf samplephpwebsite")
     }
 }
