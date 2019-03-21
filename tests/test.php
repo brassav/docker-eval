@@ -2,6 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 require "samplephpwebsite/functions.php";
+require "samplephpwebsite/config.php";
 
 class Test extends TestCase
 {
