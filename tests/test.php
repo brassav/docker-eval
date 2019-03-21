@@ -2,9 +2,8 @@
 
 use PHPUnit\Framework\TestCase;
 
-require "samplephpwebsite";
-require "samplephpwebsite/functions.php";
-require "samplephpwebsite/config.php";
+require "samplephpwebsite/*";
+
 
 class Test extends TestCase
 {
