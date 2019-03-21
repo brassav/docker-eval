@@ -10,8 +10,8 @@ class Test extends TestCase
         {
                 $expected = config('name');
                 $actual = siteName();
-               $this->expectOutputString($expected);
-               print $actual;
+                $this->expectOutputString($expected);
+                print 'toto';
         }
 }
 ?>
