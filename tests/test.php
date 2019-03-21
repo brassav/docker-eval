@@ -11,6 +11,7 @@ class Test extends TestCase
                 $expected = config('name');
                 $actual = siteName();
                $this->expectOutputString($expected);
+               print $actual;
         }
 }
 ?>
