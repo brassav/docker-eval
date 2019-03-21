@@ -1,0 +1,41 @@
+Started by user [8mha:////4HSq7tgAj4DrTO5EDPSXrXtgY3OH3IG6EuVCffpdQCi+AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Building in workspace /var/jenkins_home/workspace/job-v1
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/brassav/docker-eval
+ > git init /var/jenkins_home/workspace/job-v1 # timeout=10
+Fetching upstream changes from https://github.com/brassav/docker-eval
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/brassav/docker-eval +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/brassav/docker-eval # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/brassav/docker-eval # timeout=10
+Fetching upstream changes from https://github.com/brassav/docker-eval
+ > git fetch --tags --progress https://github.com/brassav/docker-eval +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/v1^{commit} # timeout=10
+Checking out Revision 390077e6be9764ba66ed1f55a308489c62ea7cae (origin/v1)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 390077e6be9764ba66ed1f55a308489c62ea7cae
+Commit message: "add script"
+First time build. Skipping changelog.
+ > git tag -a -f -m Jenkins Build #1 jenkins-job-v1-1 # timeout=10
+[job-v1] $ /bin/sh -xe /tmp/jenkins3481560454442292846.sh
++ rm -rf samplephpwebsite
+[job-v1] $ /bin/sh -xe /tmp/jenkins1447044924503875831.sh
++ git clone https://github.com/Akasam/samplephpwebsite
+Cloning into 'samplephpwebsite'...
++ cd samplephpwebsite
++ git checkout v1
+Already on 'v1'
+Your branch is up-to-date with 'origin/v1'.
++ cd ..
+[job-v1] $ /bin/sh -xe /tmp/jenkins8310142970184616597.sh
++ phpunit tests/test.php
+PHPUnit 5.4.6 by Sebastian Bergmann and contributors.
+
+....                                                                4 / 4 (100%)
+
+Time: 46 ms, Memory: 4.00MB
+
+OK (4 tests, 4 assertions)
+Finished: SUCCESS
